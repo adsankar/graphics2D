@@ -49,7 +49,6 @@ public class PursuitOct extends Canvas implements Runnable{
 		colorSet[3] = colorSet[4] = colorSet[5] = 225;
 		this.addMouseListener(new MouseListener() {
 
-			@Override
 			public void mouseClicked(MouseEvent e) {
 				randomizeColorSet();
 			}

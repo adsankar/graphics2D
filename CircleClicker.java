@@ -65,7 +65,7 @@ public class CircleClicker extends Canvas {
 		this.addMouseListener(m);
 	}
 	
-	public void paint(final Graphics g){
+	public void paint(Graphics g){
 
 	}
 	

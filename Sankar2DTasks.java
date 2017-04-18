@@ -58,15 +58,16 @@ public class Sankar2DTasks extends JPanel {
 	 */
 	public void drawDingbat(Graphics g, float width, float height, int x, int y){
 		Graphics2D g2 = (Graphics2D)g; //create the Graphics2D object
+		float[] dashing = {20,10,15,20};
 		//set the stroke with to 1/20th the size of the dingbat, along with rounded caps (endings) and joints
-		g2.setStroke(new BasicStroke((width+height)/40,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND));
+		g2.setStroke(new BasicStroke((width+height)/40,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND, .5f, dashing,.7f));
 		
 		//draw the dingbat which consists of four lines
 		int rounder = (int)((width/(2*Math.sqrt(2)))-width/2);
 		g2.drawLine(x, y, x+(int)width, y+(int)height);// \
 		g2.drawLine(x+(int)width/2, y+rounder, x+(int)width/2, y+(int)height-rounder);// |
 		g2.drawLine(x+(int)width, y, x, y+(int)height);// /
-		g2.drawLine(x+rounder, y+(int)height/2, x+(int)width-rounder, y+(int)height/2);// --
+		g2.drawLine(x+rounder, y+(int)height/2, x+(int)width-rounder, y+(int)height/2);;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;// --
 	}//end drawDingbat
 
 	/**
@@ -79,9 +80,9 @@ public class Sankar2DTasks extends JPanel {
 	 */
 	public void drawDingbat2(Graphics g2, float width, float height, int x, int y){
 		Graphics2D g = (Graphics2D)g2;//create the Graphics2D object
-
+		float[] dashing = {20,10,15,20};
 		//set the stroke with to 1/20th the size of the dingbat, along with rounded caps (endings) and joints
-		g.setStroke(new BasicStroke((width+height)/40,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND));
+		g.setStroke(new BasicStroke((width+height)/40,BasicStroke.CAP_ROUND,BasicStroke.JOIN_ROUND, .5f, dashing,.7f));
 		
 		//draw the curved dingbat which consists of 4 quad curves
 		g.draw(new QuadCurve2D.Float(x-width/2,y-height/2,x,y+height/2.5f,x+width/2,y+height/2));

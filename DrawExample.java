@@ -12,7 +12,7 @@ public class DrawExample {
 	public static void main(String[] args) {
 		Frame myFrame = new Frame();
 		myFrame.setSize(500,400);
-		MyCanvas c = new MyCanvas();
+		SankarBasicAWT c = new SankarBasicAWT();
 		myFrame.add(c);
 		myFrame.setVisible(true);
 		myFrame.addWindowListener(new WindowAdapter() {

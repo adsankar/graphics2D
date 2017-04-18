@@ -2,6 +2,7 @@ package graphics;
 
 import java.awt.Canvas;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
@@ -12,21 +13,23 @@ import java.awt.event.WindowEvent;
  * @author Aleksander Sankar
  * Graphics Pd. 1
  */
-public class SankarAdvTriangles extends Canvas{
+public class SankarAdvPursuitV extends Canvas{
 
 	/**
 	 * This program creates a frame, then draws pursuit curves on it, and displays it.
 	 * @param args not used
 	 */
 	public static void main(String[] args) {
+		// TODO recolorize
+
 		//create the frame
 		Frame myFrame = new Frame();
 		myFrame.setSize(1024,768);//size the frame
-		SankarAdvTriangles s = new SankarAdvTriangles();
-		myFrame.add(s);//add the canvas to the frame
+		SankarAdvPursuitV v = new SankarAdvPursuitV();
+		myFrame.add(v);//add the canvas to the frame
 		myFrame.setBackground(new Color(0,0,0));//set background color to black
 		myFrame.setVisible(true);//display the frame
-		myFrame.setTitle("The Advanced Pursuit Curves");//set the title
+		myFrame.setTitle("The Valentine's Day-Themed Pursuit Curves");//set the title
 
 		//terminates the program if the 'x' button is clicked
 		myFrame.addWindowListener(new WindowAdapter() {
@@ -42,7 +45,7 @@ public class SankarAdvTriangles extends Canvas{
 	 * @param Graphics g represents the picture drawn upon 
 	 */
 	public void paint(Graphics g){
-
+		
 		//set initial color to dark blue
 		g.setColor(new Color(0,0,50,0));
 
@@ -80,7 +83,7 @@ public class SankarAdvTriangles extends Canvas{
 		//loop through and draw the other octagons, recalculating each point, and fade color
 		for (int i=0; i<25; i++){
 			int fade =255*i/25;
-			g.setColor(new Color(fade/20,fade,255-fade,50+fade/2));//set the new color
+			g.setColor(new Color(255-fade,0,fade,50+fade/2));//set the new color
 
 			//recalculations for the points
 			nxa = step*nxa+step2*nxb;
@@ -209,6 +212,13 @@ public class SankarAdvTriangles extends Canvas{
 			g.drawPolygon(xp, yp, 3);//draw the triangle
 
 		}//end triangle
+		
+		String title = "Happy Valentine's Day!";
+		g.setColor(Color.white);
+		g.setFont(new Font ("Verdana",20,20));
+		g.drawString(title,
+				getWidth()/2-(getFontMetrics(getFont()).stringWidth(title)/2),
+				getFontMetrics(getFont()).getMaxDescent()+22);
 
 	}//end paint method
 

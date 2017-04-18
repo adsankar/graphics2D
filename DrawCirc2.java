@@ -6,18 +6,18 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
  * Draw a rainbow circle with fading effects.
  * @author Aleksander Sankar
- * YOLO Analysis of Algorithms Pd. 9
+ * Analysis of Algorithms Pd. 9
+ * BADASS VERSION
  */
-public class DrawCirc extends JPanel {
+public class DrawCirc2 extends JPanel {
 
-
+	@SuppressWarnings("deprecation")//f**k the police
 	/**
 	 * Instantiate a JFrame, and add a picture to it, then displays it.
 	 * @param args
@@ -33,8 +33,8 @@ public class DrawCirc extends JPanel {
 	      }//end windowClosing event
 	    });
 	    Container contentPane = frame.getContentPane();
-	    contentPane.add(new DrawCirc());
-	    frame.setVisible(true);
+	    contentPane.add(new DrawCirc2());
+	    frame.show();//hells yeah
 	  }//end main
 	
 	/**
@@ -44,7 +44,8 @@ public class DrawCirc extends JPanel {
 		g.setColor(Color.black);
 		g.fillRect(0, 0, getWidth(), getHeight());
 	
-		
+		//#YOLO 
+		//#SWAGT 
 		for (int i=0; i<600; i++){
 			g.setColor(new Color(15+4*i/10,i/10,i/10));//red
 			g.fillOval(100+1*i,100+1*i, 400-2*i, 400-2*i);

@@ -9,7 +9,7 @@ import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class DrawFlag extends JPanel {
+public class DrawFlag2 extends JPanel {
 
 	/**
 	 * @param args
@@ -25,12 +25,13 @@ public class DrawFlag extends JPanel {
 	      }
 	    });
 	    Container contentPane = frame.getContentPane();
-	    contentPane.add(new DrawFlag());
+	    contentPane.add(new DrawFlag2());
 	 
 	    frame.setVisible(true);
 
 	}
-		
+	
+	
 	public void paint(Graphics g){
 		int[] x = {0,266,0};
 		int[] y = {0,200,400};

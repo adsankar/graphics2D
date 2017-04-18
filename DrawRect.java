@@ -1,11 +1,10 @@
-package more;
+package graphics;
 
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
- 
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
  
@@ -14,20 +13,10 @@ public class DrawRect extends JPanel {
 	 * 
 	 */
 
-public void paintComponent(Graphics g) {
-    super.paintComponent(g);
-    g.setColor(Color.blue);
-    g.drawRect(10, 10, 80, 30);
-    g.drawRoundRect(100, 10, 80, 30, 15, 15);
- 
-    int thickness = 4;
- 
-    for (int i = 0; i <= thickness; i++)
-      g.draw3DRect(200 - i, 10 - i, 80 + 2 * i, 30 + 2 * i, true);
-    for (int i = 0; i < thickness; i++)
-      g.draw3DRect(200 - i, 50 - i, 80 + 2 * i, 30 + 2 * i, false);
- 
-    g.drawOval(10, 100, 80, 30);
+public void paintComponent(Graphics g1) {
+//   Graphics2D g = (Graphics2D) g1;
+//   GradientPaint gr = new GradientPaint(0, 0, Color.red, 100, 100, Color.green);
+   // fill here Rectangle2D()
   }
  
 public static void main(String[] args) {
@@ -46,3 +35,4 @@ public static void main(String[] args) {
     
   }
 }
+

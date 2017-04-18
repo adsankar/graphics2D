@@ -1,4 +1,4 @@
-package more;
+package graphics;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -53,3 +53,4 @@ public class Drawing2 extends JPanel {
 
 	
 }
+
